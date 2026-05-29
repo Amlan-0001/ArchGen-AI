@@ -2,7 +2,6 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.api.generate import router as generate_router
-from app.config import ALLOWED_ORIGINS
 
 app = FastAPI(
     title="AI App Compiler",
@@ -10,10 +9,12 @@ app = FastAPI(
     version="1.0.0"
 )
 
-# Enable CORS
+# CORS Configuration
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=ALLOWED_ORIGINS,
+    allow_origins=[
+        "https://archgen-tau.vercel.app"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -25,17 +26,13 @@ app.include_router(generate_router)
 # Root endpoint
 @app.get("/")
 def root():
-
     return {
-        "message": "AI App Compiler Backend Running ðŸš€"
+        "message": "AI App Compiler Backend Running 🚀"
     }
-
 
 # Health endpoint
 @app.get("/health")
 def health_check():
-
     return {
         "status": "healthy"
     }
-
