@@ -30,11 +30,11 @@ export default function Navbar() {
             AI Blueprint Engine
           </span>
           <a
-            href="https://github.com"
+            href="https://github.com/Amlan-0001/ArchGen-AI"
             target="_blank"
-            rel="noreferrer"
-            aria-label="Open GitHub"
-            className="grid h-10 w-10 place-items-center rounded-lg border border-white/10 bg-white/[0.04] text-muted transition hover:border-plasma/45 hover:text-plasma hover:shadow-glow"
+            rel="noopener noreferrer"
+            aria-label="View ArchGen AI GitHub Repository"
+            className="grid h-10 w-10 place-items-center rounded-lg border border-white/10 bg-white/[0.04] text-muted transition hover:border-plasma/45 hover:text-plasma hover:shadow-glow cursor-pointer"
           >
             <Github className="h-4 w-4" />
           </a>
