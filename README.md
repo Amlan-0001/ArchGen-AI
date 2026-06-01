@@ -1,67 +1,100 @@
 # 🚀 ArchGen AI
 
-> Transforming Product Intent into Production Systems
+### Transforming Product Intent into Production Systems
 
 ArchGen AI is an AI-powered Software Architecture Orchestration Platform that converts natural language product ideas into structured, production-ready application blueprints.
 
-Instead of manually designing architecture, APIs, databases, authentication systems, and UI structures, developers simply describe what they want to build.
+Inspired by compiler design principles, ArchGen AI transforms user intent into a series of validated engineering artifacts including software architecture, UI schemas, API contracts, database models, authentication rules, validation reports, and repair traces.
 
-ArchGen AI then generates the complete system blueprint through a multi-stage compiler-inspired pipeline.
+Unlike simple prompt-to-output systems, ArchGen AI follows a deterministic multi-stage pipeline with validation and autonomous repair mechanisms to improve reliability, consistency, and execution readiness.
 
 ---
 
 # 🌐 Live Demo
 
-Frontend:
-[ADD YOUR VERCEL URL]
+### Frontend Application
 
-Backend:
-https://archgen-ai-backend.onrender.com
-
-Repository:
-https://github.com/Amlan-0001/ArchGen-AI
+**Live URL:** https://archgen-tau.vercel.app/
 
 ---
 
-# 🎯 Problem Statement
+### Backend API
 
-Modern software development starts with a large amount of planning:
+**API URL:** https://archgen-ai-backend.onrender.com
 
-- Requirement analysis
-- Architecture design
-- UI planning
-- API design
-- Database modeling
-- Validation
-- Consistency checks
+**Health Check:** https://archgen-ai-backend.onrender.com/health
 
-This process is slow, repetitive, and error-prone.
-
-ArchGen AI aims to automate the planning phase of software development by converting natural language requirements into structured engineering artifacts.
+**Swagger Documentation:** https://archgen-ai-backend.onrender.com/docs
 
 ---
 
-# 🧠 Inspiration
+### GitHub Repository
 
-This project was built as part of an AI Engineering Systems Design challenge.
-
-The challenge required building a system that behaves like a compiler:
-
-Natural Language
-↓
-Structured Representation
-↓
-Validation
-↓
-Repair
-↓
-Executable Blueprint
-
-Unlike simple prompt engineering systems, the goal was to create a reliable, modular, and production-aware pipeline.
+**Repository:** https://github.com/Amlan-0001/ArchGen-AI
 
 ---
 
-# 🏗️ System Architecture
+# 🎯 Project Vision
+
+Building software products requires extensive planning before implementation:
+
+* Requirement Analysis
+* Architecture Design
+* UI Planning
+* API Design
+* Database Modeling
+* Validation
+* Consistency Checks
+
+These tasks are repetitive, time-consuming, and often involve multiple iterations.
+
+ArchGen AI aims to function as an intelligent software compiler that transforms natural language product intent into structured, executable software blueprints.
+
+The long-term vision is:
+
+```text
+Product Idea
+      ↓
+System Architecture
+      ↓
+Application Blueprint
+      ↓
+Code Generation
+      ↓
+Deployment
+```
+
+---
+
+# 🧠 Problem Statement
+
+Given a natural language prompt such as:
+
+> Build a CRM platform with authentication, customer management, payments, analytics dashboard, and role-based access.
+
+The system must generate:
+
+✅ UI Schema
+
+✅ API Schema
+
+✅ Database Schema
+
+✅ Authentication Rules
+
+✅ Business Logic Representation
+
+✅ Validation Report
+
+✅ Repair Recommendations
+
+while maintaining cross-layer consistency and execution awareness.
+
+---
+
+# 🏗️ Compiler-Inspired Architecture
+
+ArchGen AI is designed as a multi-stage orchestration pipeline.
 
 ```text
 User Prompt
@@ -87,188 +120,112 @@ Validation Engine
 Repair Engine
      │
      ▼
-Final Production Blueprint
+Production Blueprint
 ```
+
+Each stage has a dedicated responsibility and can be validated independently.
+
+This modular architecture improves:
+
+* Reliability
+* Debuggability
+* Consistency
+* Scalability
+
+compared to single-prompt systems.
 
 ---
 
-# ⚙️ Pipeline Stages
+# ⚡ Key Features
 
-## 1. Intent Extraction
+### Intent Extraction
 
-Converts raw user prompts into structured product requirements.
+Transforms open-ended user prompts into structured product specifications.
 
-Example:
+### Architecture Generation
 
-Input:
+Creates:
 
-```text
-Build a CRM with authentication, payments and analytics dashboard.
-```
+* Entities
+* Modules
+* Roles
+* Flows
+* System Boundaries
 
-Output:
+### UI Schema Generation
 
-```json
-{
-  "application_type": "CRM",
-  "features": [
-    "authentication",
-    "payments",
-    "analytics"
-  ]
-}
-```
+Produces structured frontend blueprints:
 
----
+* Pages
+* Components
+* Layouts
+* Forms
+* Dashboards
 
-## 2. Architecture Generation
+### API Schema Generation
+
+Creates service contracts:
+
+* Endpoints
+* Methods
+* Validation Rules
+* Request/Response Structures
+
+### Database Schema Generation
 
 Generates:
 
-- Entities
-- User Roles
-- System Modules
-- Application Flows
-- Service Boundaries
+* Tables
+* Relationships
+* Constraints
+* Entity Models
 
-Example:
+### Validation Engine
 
-```json
-{
-  "roles": [
-    "Admin",
-    "User"
-  ],
-  "modules": [
-    "Authentication",
-    "Payments",
-    "Analytics"
-  ]
-}
-```
+Automatically verifies:
 
----
+* Missing fields
+* Invalid structures
+* Cross-layer inconsistencies
+* Schema mismatches
 
-## 3. UI Schema Generation
+### Repair Engine
 
-Generates structured frontend configuration.
+Performs targeted repair and regeneration instead of full retries.
 
-Includes:
+This reduces:
 
-- Pages
-- Components
-- Forms
-- Tables
-- Dashboards
-- Navigation
+* Latency
+* Cost
+* Hallucinations
+
+while improving reliability.
 
 ---
 
-## 4. API Schema Generation
+# 🔍 Reliability & Control Mechanisms
 
-Generates service contracts.
+## Strict Schema Enforcement
 
-Example:
-
-```json
-{
-  "route": "/users",
-  "method": "POST"
-}
-```
-
-Includes:
-
-- CRUD operations
-- Validation rules
-- Request contracts
-
----
-
-## 5. Database Schema Generation
-
-Generates:
-
-- Tables
-- Relationships
-- Primary Keys
-- Foreign Keys
-
-Example:
-
-```json
-{
-  "table": "users",
-  "fields": [
-    "id",
-    "email",
-    "password"
-  ]
-}
-```
-
----
-
-## 6. Validation Engine
-
-Ensures consistency across generated layers.
-
-Checks:
-
-- Missing fields
-- Invalid structures
-- Schema mismatches
-- Cross-layer inconsistencies
-
-Examples:
-
-✓ API fields exist in DB schema
-
-✓ UI forms map to API endpoints
-
-✓ Role permissions are valid
-
----
-
-## 7. Repair Engine
-
-Automatically resolves detected issues.
-
-Capabilities:
-
-- Missing key repair
-- Invalid schema repair
-- Consistency repair
-- Regeneration of failed sections
-
-Instead of blindly regenerating the entire output, ArchGen AI repairs only the affected layer.
-
----
-
-# 🔍 Reliability Features
-
-## Deterministic Generation
-
-The system follows a structured multi-stage process rather than relying on a single prompt.
-
-Benefits:
-
-- More predictable outputs
-- Better consistency
-- Reduced hallucinations
-
----
-
-## Schema Enforcement
-
-All outputs follow strict JSON structures.
+All outputs are generated as structured JSON artifacts.
 
 Guarantees:
 
-- Valid JSON
-- Required fields
-- Structured outputs
-- Type-safe schemas
+* Valid JSON
+* Required Fields
+* Type Safety
+* Structured Outputs
+
+---
+
+## Cross-Layer Validation
+
+Ensures:
+
+* UI fields map to APIs
+* APIs map to database fields
+* Roles map to permissions
+* Schemas remain consistent
 
 ---
 
@@ -276,16 +233,12 @@ Guarantees:
 
 The system handles:
 
-- Ambiguous prompts
-- Missing requirements
-- Incomplete specifications
-- Conflicting requests
+* Ambiguous Prompts
+* Missing Requirements
+* Underspecified Inputs
+* Conflicting Instructions
 
-Through:
-
-- Assumption generation
-- Validation
-- Repair
+through validation and repair workflows.
 
 ---
 
@@ -293,55 +246,34 @@ Through:
 
 ## Frontend
 
-- React
-- Vite
-- Tailwind CSS
+* React
+* Vite
+* Tailwind CSS
 
 ## Backend
 
-- FastAPI
-- Python
-- Pydantic
+* FastAPI
+* Python
+* Pydantic
 
 ## AI Layer
 
-- Groq API
-- Llama Models
+* Groq API
+* Llama 3.3 70B Versatile
 
 ## Deployment
 
-- Vercel
-- Render
+### Frontend
+
+Vercel
+
+### Backend
+
+Render
 
 ---
 
-# 📂 Project Structure
-
-```text
-ArchGen-AI
-│
-├── backend
-│   ├── app
-│   │   ├── api
-│   │   ├── pipeline
-│   │   ├── schemas
-│   │   ├── services
-│   │   ├── validators
-│   │   └── repair
-│   │
-│   └── tests
-│
-├── frontend
-│   ├── src
-│   ├── public
-│   └── assets
-│
-└── docs
-```
-
----
-
-# 🚀 Local Setup
+# 🚀 Quick Start
 
 ## Clone Repository
 
@@ -349,8 +281,6 @@ ArchGen-AI
 git clone https://github.com/Amlan-0001/ArchGen-AI.git
 cd ArchGen-AI
 ```
-
----
 
 ## Backend Setup
 
@@ -402,81 +332,41 @@ http://localhost:5173
 
 ---
 
-# 📊 Key Design Decisions
-
-### Why Multi-Stage Pipeline?
-
-A single prompt approach is unreliable.
-
-Breaking generation into stages provides:
-
-- Better control
-- Easier debugging
-- Improved consistency
-- Repairability
-
----
-
-### Why Validation Layer?
-
-LLMs can hallucinate.
-
-Validation ensures:
-
-- Structural correctness
-- Schema consistency
-- Runtime readiness
-
----
-
-### Why Repair Engine?
-
-Regenerating everything is expensive.
-
-Repairing only failed components:
-
-- Reduces cost
-- Reduces latency
-- Improves reliability
-
----
-
 # 🔮 Future Roadmap
 
-## Phase 2
+### Phase 2
 
-- Architecture Visualization
-- Interactive Graphs
-- Export JSON
+* Architecture Visualization
+* Interactive Dependency Graphs
+* Blueprint Export System
 
-## Phase 3
+### Phase 3
 
-- Full Code Generation
-- Multi-Agent Orchestration
-- Repository Generation
+* Full Code Generation
+* Multi-Agent Architecture
+* Repository Generation
 
-## Phase 4
+### Phase 4
 
-- One-Click Deployment
-- No-Code Platform
-- Enterprise Architecture Studio
+* One-Click Deployment
+* No-Code Software Studio
+* Enterprise Architecture Platform
 
 ---
 
 # 👨‍💻 Author
 
-N. M. Amlan
+**N. M. Amlan**
 
-B.Tech
-IIIT Bhubaneswar
+B.Tech, IIIT Bhubaneswar
 
-Interests:
+Areas of Interest:
 
-- Agentic AI
-- Software Architecture
-- LLM Systems
-- AI Engineering
-- Future Technologies
+* Agentic AI
+* Software Architecture
+* LLM Systems
+* AI Engineering
+* Future Technologies
 
 ---
 
